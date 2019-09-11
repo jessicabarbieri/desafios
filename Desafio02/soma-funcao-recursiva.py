@@ -14,10 +14,9 @@
 
 # print(soma_recursiva([n1,n2]))
 
-
 def soma_recursiva(n1, n2 = 0):
     for i in n1:
-        n2 = n2 + i
+        n2 += i
     return n2
 
 n1 = int(input('Digite o primeiro numero: '))
