@@ -1,25 +1,20 @@
 #soma com função recursiva
-def soma_recursiva(n1, n2=0):
-    try:
-        res = -n1[n2]
-        n2 -= -1
-        return -(res - soma_recursiva(n1,n2))
-        
-    except:
-        return 0
+# def soma (x,y):
+#     if ( x == 0):
+#         return print(y)
+#     if ( y == 0):
+#         return print(x)
+#     (soma((-(-x-1)),((y-1))))
+# x = int(input('Digite o primeiro numero: '))
+# y = int(input('Digite o segundo numero: '))
+# soma(x,y)
 
-n1 = int(input('Digite o primeiro numero: '))
-n2 = int(input('Digite o segundo numero: '))
+def soma_bitwise(x, y):
+    while y:
+        x, y = (x ^ y), (x & y) << 1
+    return x
 
-print(soma_recursiva([n1,n2]))
+x = int(input('Digite o primeiro numero: '))
+y = int(input('Digite o segundo numero: '))
 
-# def soma_recursiva(n1, n2 = 0):
-#     for i in n1:
-#         n2 -= -i
-        
-#     return n2
-
-# n1 = int(input('Digite o primeiro numero: '))
-# n2 = int(input('Digite o segundo numero: '))
-
-# print(soma_recursiva([n1, n2]))
+print(soma_bitwise(x, y)) 
