@@ -1,9 +1,9 @@
 
-# soma com função recursiva
+#soma com função recursiva
 # def soma_recursiva(n1, n2=0):
 #     try:
 #         res = n1[n2]
-#         n2+=1
+#         n2 -= -1
 #         return res + soma_recursiva(n1,n2)
         
 #     except:
@@ -16,7 +16,8 @@
 
 def soma_recursiva(n1, n2 = 0):
     for i in n1:
-        n2 += i
+        n2 -= -i
+        
     return n2
 
 n1 = int(input('Digite o primeiro numero: '))
